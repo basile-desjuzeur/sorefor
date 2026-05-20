@@ -3,3 +3,4 @@ __pycache__
 logs.txt
 venv/
 *.pyc
+*.csv
