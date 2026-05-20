@@ -4,3 +4,4 @@ logs.txt
 venv/
 *.pyc
 *.csv
+.env
