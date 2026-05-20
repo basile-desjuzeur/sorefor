@@ -8,35 +8,33 @@ load_dotenv()
 
 
 def notify_owner(data: dict):
-    msg = EmailMessage()
 
-    msg["Subject"] = f"Nouveau contact : {data.get('objet', 'Sans objet')}"
-    msg["From"] = os.getenv("EMAIL_USER")
-    msg["To"] = os.getenv("OWNER_EMAIL")
+    for owner in [os.getenv('OWNER_EMAIL_1'), os.getenv('OWNER_EMAIL_2')]:
 
-    # Permet de répondre directement au visiteur
-    if data.get("email"):
-        msg["Reply-To"] = data["email"]
+        msg = EmailMessage()
 
-    content = f"""
-Nouveau message reçu
+        msg["Subject"] = f"Nouveau contact : {data.get('objet', 'Sans objet')}"
+        msg["From"] = os.getenv("EMAIL_USER")
+        msg["To"] = owner
 
-Nom : {data.get('nom')}
-Prénom : {data.get('prenom')}
-Email : {data.get('email')}
-Téléphone : {data.get('telephone')}
-Objet : {data.get('objet')}
+        content = f"""
+    Nouveau message reçu
 
-Message :
-{data.get('message')}
-"""
+    Nom : {data.get('nom')}
+    Prénom : {data.get('prenom')}
+    Email : {data.get('email')}
+    Téléphone : {data.get('telephone')}
+    Objet : {data.get('objet')}
 
-    msg.set_content(content)
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
-        print('couoc')
-        smtp.login(
-            os.getenv("EMAIL_USER"), #type : ignore # type: ignore
-            os.getenv("EMAIL_PASS")  # type: ignore
-        )
+    Message :
+    {data.get('message')}
+    """
 
-        smtp.send_message(msg)
+        msg.set_content(content)
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+            smtp.login(
+                os.getenv("EMAIL_USER"), #type : ignore
+                os.getenv("EMAIL_PASS") #type : ignore
+            )
+
+            smtp.send_message(msg)
