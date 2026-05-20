@@ -17,13 +17,10 @@
     --text: #1a1a18;
     --muted: #5a5a52;
     --white: #ffffff;
-    --crosshair: #4a4a4a;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Source Sans 3', sans-serif;
     background: var(--linen);
@@ -40,18 +37,16 @@
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(255,255,255,0.08);
   }
-
   .nav-logo {
     display: flex; align-items: center; gap: 0.8rem;
     text-decoration: none;
   }
-  .nav-log img { height: 36px; filter: brightness(0) invert(1) brightness(0.9); }
+  .nav-logo img { height: 36px}
   .nav-logo span {
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem; font-weight: 700;
     color: var(--linen); letter-spacing: 0.12em;
   }
-
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
     color: rgba(245,240,232,0.75);
@@ -70,7 +65,6 @@
     align-items: center; position: relative; overflow: hidden;
     padding-top: 80px;
   }
-
   .hero-trees {
     position: absolute; bottom: 0; left: 0; right: 0;
     height: 35%; opacity: 0.12;
@@ -78,12 +72,10 @@
     background-size: cover; background-position: bottom;
     pointer-events: none;
   }
-
   .hero-content {
     padding: 5rem 3rem 5rem 5rem;
     position: relative; z-index: 2;
   }
-
   .hero-tag {
     display: inline-block;
     font-size: 0.72rem; font-weight: 600; letter-spacing: 0.22em;
@@ -91,25 +83,20 @@
     border: 1px solid rgba(245,240,232,0.2);
     padding: 0.35rem 0.9rem; margin-bottom: 2rem;
   }
-
   .hero-title {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2.8rem, 5vw, 4.5rem);
     font-weight: 900; line-height: 1.05;
-    color: var(--linen);
-    margin-bottom: 1.5rem;
+    color: var(--linen); margin-bottom: 1.5rem;
   }
   .hero-title em { font-style: italic; color: rgba(245,240,232,0.7); }
-
   .hero-sub {
     font-family: 'Libre Baskerville', serif;
     font-size: 1.05rem; line-height: 1.75;
     color: rgba(245,240,232,0.72);
     max-width: 500px; margin-bottom: 2.5rem;
   }
-
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-
   .btn-primary {
     display: inline-block; text-decoration: none;
     background: var(--linen); color: var(--forest);
@@ -118,7 +105,6 @@
     transition: background 0.2s, transform 0.15s;
   }
   .btn-primary:hover { background: #fff; transform: translateY(-2px); }
-
   .btn-secondary {
     display: inline-block; text-decoration: none;
     border: 1px solid rgba(245,240,232,0.45); color: var(--linen);
@@ -127,14 +113,13 @@
     transition: border-color 0.2s, transform 0.15s;
   }
   .btn-secondary:hover { border-color: var(--linen); transform: translateY(-2px); }
-
   .hero-logo-col {
     display: flex; align-items: center; justify-content: center;
     position: relative; z-index: 2; padding: 3rem;
   }
   .hero-logo-col img {
     width: min(380px, 85%);
-    filter: brightness(0) invert(1) brightness(0.9);
+    /*filter: brightness(0) invert(1) brightness(0.9);*/
     opacity: 0.9;
   }
 
@@ -143,7 +128,6 @@
     background: var(--linen-dark);
     border-top: 3px solid var(--forest);
     display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 0;
   }
   .stat-item {
     padding: 2.2rem 3rem;
@@ -153,33 +137,26 @@
   .stat-item:last-child { border-right: none; }
   .stat-num {
     font-family: 'Playfair Display', serif;
-    font-size: 2.6rem; font-weight: 900; color: var(--forest);
-    line-height: 1;
+    font-size: 2.6rem; font-weight: 900; color: var(--forest); line-height: 1;
   }
   .stat-label {
     font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--muted);
-    margin-top: 0.4rem;
+    text-transform: uppercase; color: var(--muted); margin-top: 0.4rem;
   }
 
   /* ── SECTIONS COMMON ── */
   section { scroll-margin-top: 80px; }
-
   .section-inner { max-width: 1100px; margin: 0 auto; padding: 6rem 3rem; }
-
   .section-label {
     font-size: 0.72rem; font-weight: 700; letter-spacing: 0.25em;
-    text-transform: uppercase; color: var(--forest-light);
-    margin-bottom: 1rem;
+    text-transform: uppercase; color: var(--forest-light); margin-bottom: 1rem;
   }
-
   .section-title {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700; line-height: 1.15;
     color: var(--text); margin-bottom: 1.5rem;
   }
-
   .prose {
     font-family: 'Libre Baskerville', serif;
     font-size: 1rem; line-height: 1.85;
@@ -189,21 +166,15 @@
 
   /* ── QUI SOMMES-NOUS ── */
   #qui { background: var(--white); }
-
   #qui .section-inner {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 5rem; align-items: center;
   }
-
   .divider-line {
-    width: 60px; height: 3px; background: var(--forest);
-    margin-bottom: 1.5rem;
+    width: 60px; height: 3px; background: var(--forest); margin-bottom: 1.5rem;
   }
-
   .quote-block {
-    background: var(--forest);
-    padding: 3rem 3.5rem;
-    position: relative;
+    background: var(--forest); padding: 3rem 3.5rem; position: relative;
   }
   .quote-block::before {
     content: '"';
@@ -221,63 +192,47 @@
 
   /* ── CONSTAT ── */
   #constat { background: var(--linen); }
-
   .constat-grid {
     display: grid; grid-template-columns: repeat(2, 1fr);
-    gap: 1.5px; background: rgba(0,0,0,0.08);
-    margin-top: 3rem;
+    gap: 1.5px; background: rgba(0,0,0,0.08); margin-top: 3rem;
   }
-  .constat-card {
-    background: var(--white);
-    padding: 2.5rem; position: relative;
-  }
+  .constat-card { background: var(--white); padding: 2.5rem; position: relative; }
   .constat-card-num {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem; font-weight: 900;
     color: var(--forest); opacity: 0.15;
-    position: absolute; top: 1rem; right: 1.5rem;
-    line-height: 1;
+    position: absolute; top: 1rem; right: 1.5rem; line-height: 1;
   }
   .constat-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem; font-weight: 700;
     color: var(--text); margin-bottom: 0.8rem;
   }
-  .constat-card p {
-    font-size: 0.92rem; line-height: 1.75; color: var(--muted);
-  }
+  .constat-card p { font-size: 0.92rem; line-height: 1.75; color: var(--muted); }
 
   /* ── MODÈLE ── */
   #modele { background: var(--forest); }
   #modele .section-title { color: var(--linen); }
   #modele .section-label { color: rgba(245,240,232,0.5); }
   #modele .prose { color: rgba(245,240,232,0.72); }
-
   .steps {
     margin-top: 3.5rem;
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
   }
-  .step {
-    border-top: 2px solid rgba(245,240,232,0.2);
-    padding-top: 1.5rem;
-  }
+  .step { border-top: 2px solid rgba(245,240,232,0.2); padding-top: 1.5rem; }
   .step-num {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem; font-weight: 900;
-    color: rgba(245,240,232,0.18); line-height: 1;
-    margin-bottom: 0.5rem;
+    color: rgba(245,240,232,0.18); line-height: 1; margin-bottom: 0.5rem;
   }
   .step h3 {
     font-size: 0.88rem; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--linen);
-    margin-bottom: 0.7rem;
+    text-transform: uppercase; color: var(--linen); margin-bottom: 0.7rem;
   }
   .step p { font-size: 0.9rem; line-height: 1.7; color: rgba(245,240,232,0.6); }
 
   /* ── SERVICES ── */
   #services { background: var(--white); }
-
   .services-list { margin-top: 3rem; }
   .service-item {
     display: grid; grid-template-columns: 3rem 1fr;
@@ -289,8 +244,7 @@
   .service-bullet {
     width: 2rem; height: 2rem; margin-top: 0.15rem;
     border: 2px solid var(--forest);
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
   .service-bullet svg { width: 1rem; height: 1rem; fill: var(--forest); }
   .service-text h3 {
@@ -299,25 +253,20 @@
     color: var(--text); margin-bottom: 0.4rem;
   }
   .service-text p { font-size: 0.9rem; line-height: 1.7; color: var(--muted); }
-
   .tarif-note {
     margin-top: 2.5rem; padding: 1.8rem 2rem;
     background: var(--linen); border-left: 4px solid var(--forest);
     font-family: 'Libre Baskerville', serif;
-    font-size: 0.95rem; line-height: 1.7; color: var(--muted);
-    font-style: italic;
+    font-size: 0.95rem; line-height: 1.7; color: var(--muted); font-style: italic;
   }
 
   /* ── CONTACT ── */
   #contact { background: var(--linen-dark); }
-
   #contact .section-inner {
     display: grid; grid-template-columns: 1fr 1.2fr;
     gap: 5rem; align-items: start;
   }
-
   .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
-
   .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
   .form-group label {
     font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em;
@@ -338,10 +287,12 @@
   .form-group select:focus,
   .form-group textarea:focus { border-color: var(--forest); }
   .form-group textarea { resize: vertical; min-height: 130px; }
-  .form-group select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231b3d1b' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
-
+  .form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231b3d1b' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem;
+  }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
   .btn-submit {
     background: var(--forest); color: var(--linen);
     border: none; cursor: pointer;
@@ -353,8 +304,6 @@
     gap: 2rem; transition: background 0.2s;
   }
   .btn-submit:hover { background: var(--forest-mid); }
-  .btn-submit span { font-size: 1.1rem; }
-
   .contact-info { padding-top: 0.5rem; }
   .contact-info h3 {
     font-family: 'Playfair Display', serif;
@@ -363,33 +312,26 @@
   }
   .contact-info p {
     font-family: 'Libre Baskerville', serif;
-    font-size: 0.95rem; line-height: 1.8; color: var(--muted);
-    margin-bottom: 1.5rem;
+    font-size: 0.95rem; line-height: 1.8; color: var(--muted); margin-bottom: 1.5rem;
   }
   .contact-info .highlight {
-    background: var(--forest); color: var(--linen);
-    padding: 1.5rem 2rem; margin-top: 2rem;
+    background: var(--forest); color: var(--linen); padding: 1.5rem 2rem; margin-top: 2rem;
   }
-  .contact-info .highlight p {
-    color: rgba(245,240,232,0.82); margin: 0;
-    font-size: 0.88rem;
-  }
+  .contact-info .highlight p { color: rgba(245,240,232,0.82); margin: 0; font-size: 0.88rem; }
   .confidential-badge {
     display: inline-flex; align-items: center; gap: 0.5rem;
     font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
-    text-transform: uppercase; color: rgba(245,240,232,0.55);
-    margin-bottom: 0.8rem;
+    text-transform: uppercase; color: rgba(245,240,232,0.55); margin-bottom: 0.8rem;
   }
   .confidential-badge::before {
-    content: ''; display: block;
-    width: 8px; height: 8px;
+    content: ''; display: block; width: 8px; height: 8px;
     border-radius: 50%; background: rgba(245,240,232,0.3);
   }
 
   /* ── FORM SUCCESS ── */
   .form-success {
-    display: none; background: var(--forest);
-    color: var(--linen); padding: 2rem;
+    background: var(--forest); color: var(--linen);
+    padding: 2rem;
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem; text-align: center;
   }
@@ -407,97 +349,21 @@
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: none; }
 
-  /* ── LOG VIEWER (admin) ── */
-  .log-overlay {
-    display: none; position: fixed; inset: 0; z-index: 9999;
-    background: rgba(0,0,0,0.85);
-    align-items: center; justify-content: center;
-  }
-  .log-overlay.open { display: flex; }
-  .log-panel {
-    background: #0d1a0d; color: #7ec87e;
-    font-family: 'Courier New', monospace; font-size: 0.8rem;
-    width: min(900px, 92vw); max-height: 80vh;
-    overflow-y: auto; border: 1px solid #3a6e3a;
-    box-shadow: 0 0 60px rgba(0,0,0,0.6);
-  }
-  .log-header {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 0.8rem 1.2rem;
-    background: #162016; border-bottom: 1px solid #2a4e2a;
-    position: sticky; top: 0;
-  }
-  .log-header span { font-size: 0.75rem; letter-spacing: 0.12em; color: #5a9e5a; }
-  .log-tabs { display: flex; border-bottom: 1px solid #2a4e2a; }
-  .log-tab {
-    background: none; border: none; color: #5a9e5a;
-    font-family: 'Courier New', monospace; font-size: 0.75rem;
-    letter-spacing: 0.1em; padding: 0.6rem 1.2rem; cursor: pointer;
-    border-bottom: 2px solid transparent; transition: color 0.15s;
-  }
-  .log-tab.active { color: #a0e8a0; border-bottom-color: #7ec87e; }
-  .log-close {
-    background: none; border: none; color: #7ec87e;
-    font-size: 1.3rem; cursor: pointer; padding: 0 0.3rem;
-  }
-  .log-body { padding: 1rem 1.2rem; }
-  .log-entry { padding: 0.35rem 0; border-bottom: 1px solid #1a2e1a; }
-  .log-entry .ts { color: #4a7a4a; margin-right: 1rem; }
-  .log-entry .event { color: #a0e8a0; margin-right: 0.6rem; }
-  .log-entry .detail { color: #7ec87e; }
-  .log-empty { color: #3a6e3a; font-style: italic; padding: 1rem 0; }
-  /* form submissions */
-  .sub-card {
-    border: 1px solid #2a4e2a; padding: 1rem 1.2rem; margin-bottom: 0.8rem;
-    background: #0a160a;
-  }
-  .sub-card-header {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 0.7rem;
-  }
-  .sub-card-header .sub-objet { color: #a0e8a0; font-weight: bold; font-size: 0.82rem; }
-  .sub-card-header .sub-ts { color: #4a7a4a; font-size: 0.75rem; }
-  .sub-field { display: grid; grid-template-columns: 110px 1fr; gap: 0.3rem 0.8rem; margin-bottom: 0.25rem; }
-  .sub-field .k { color: #4a7a4a; font-size: 0.75rem; }
-  .sub-field .v { color: #c8e8c8; font-size: 0.8rem; word-break: break-word; }
-  .sub-actions { margin-top: 0.8rem; display: flex; gap: 0.8rem; }
-  .sub-btn {
-    background: none; border: 1px solid #3a6e3a; color: #7ec87e;
-    font-family: 'Courier New', monospace; font-size: 0.72rem;
-    letter-spacing: 0.1em; padding: 0.3rem 0.7rem; cursor: pointer;
-    transition: background 0.15s;
-  }
-  .sub-btn:hover { background: #1a3e1a; }
-  .sub-btn.danger { border-color: #6e3a3a; color: #e87e7e; }
-  .sub-btn.danger:hover { background: #3e1a1a; }
-  .log-toolbar { display: flex; justify-content: flex-end; padding: 0.5rem 0 0.2rem; }
-  .export-btn {
-    background: none; border: 1px solid #3a6e3a; color: #7ec87e;
-    font-family: 'Courier New', monospace; font-size: 0.72rem;
-    letter-spacing: 0.1em; padding: 0.3rem 0.8rem; cursor: pointer;
-  }
-  .export-btn:hover { background: #1a3e1a; }
-
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
-
     #accueil { grid-template-columns: 1fr; }
     .hero-logo-col { display: none; }
     .hero-content { padding: 3rem 1.5rem; }
-
     .stats-band { grid-template-columns: 1fr; }
     .stat-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.1); }
-
     .section-inner { padding: 4rem 1.5rem; }
     #qui .section-inner,
     #contact .section-inner { grid-template-columns: 1fr; gap: 3rem; }
-
     .constat-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
-
     footer { flex-direction: column; gap: 0.8rem; text-align: center; }
   }
 </style>
@@ -507,7 +373,7 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#accueil">
-    <img src="./imijzig/logo_sorefor.png" alt="Sorefor">
+    <img src="/static/img/logo_sorefor.png" alt="Sorefor" width="30">
   </a>
   <ul class="nav-links">
     <li><a href="#accueil">Accueil</a></li>
@@ -531,7 +397,7 @@
     </div>
   </div>
   <div class="hero-logo-col reveal" style="transition-delay:0.2s">
-    <img src="./img/logo_sorefor.png" alt="Sorefor — Société de Régulation Forestière">
+    <img src="/static/img/logo_sorefor.png" alt="Sorefor — Société de Régulation Forestière">
   </div>
 </section>
 
@@ -687,46 +553,51 @@
       </div>
     </div>
     <div class="reveal" style="transition-delay:0.15s">
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="nom">Nom *</label>
-            <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+
+      {% if success %}
+        <div class="form-success">
+          ✓ Message envoyé — nous vous répondrons dans les meilleurs délais.
+        </div>
+      {% else %}
+        <form class="contact-form" method="POST" action="/contact">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+            </div>
           </div>
           <div class="form-group">
-            <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="votre@email.fr">
           </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required placeholder="votre@email.fr">
-        </div>
-        <div class="form-group">
-          <label for="telephone">Téléphone</label>
-          <input type="tel" id="telephone" name="telephone" placeholder="+33 6 XX XX XX XX">
-        </div>
-        <div class="form-group">
-          <label for="objet">Objet *</label>
-          <select id="objet" name="objet" required>
-            <option value="" disabled selected>Sélectionner…</option>
-            <option value="info">Demande d'information sur les services</option>
-            <option value="devis">Demande de devis</option>
-            <option value="regulateur">Devenir régulateur professionnel</option>
-            <option value="autre">Autre</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" required placeholder="Décrivez votre situation, votre territoire, vos besoins…"></textarea>
-        </div>
-        <button type="submit" class="btn-submit">
-          Envoyer le message <span>→</span>
-        </button>
-      </form>
-      <div class="form-success" id="formSuccess">
-        ✓ Message envoyé — nous vous répondrons dans les meilleurs délais.
-      </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="+33 6 XX XX XX XX">
+          </div>
+          <div class="form-group">
+            <label for="objet">Objet *</label>
+            <select id="objet" name="objet" required>
+              <option value="" disabled selected>Sélectionner…</option>
+              <option value="info">Demande d'information sur les services</option>
+              <option value="devis">Demande de devis</option>
+              <option value="regulateur">Devenir régulateur professionnel</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required placeholder="Décrivez votre situation, votre territoire, vos besoins…"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            Envoyer le message <span>→</span>
+          </button>
+        </form>
+      {% endif %}
+
     </div>
   </div>
 </section>
@@ -735,198 +606,15 @@
 <footer>
   <span>© 2025 SOREFOR — Société de Régulation Forestière</span>
   <span>Tous droits réservés · <a href="#contact">Contact</a></span>
-  <!-- admin trigger: triple-click on footer year -->
-  <span id="adminTrigger" style="cursor:default;user-select:none" title="">·</span>
 </footer>
 
-<!-- LOG OVERLAY -->
-<div class="log-overlay" id="logOverlay">
-  <div class="log-panel">
-    <div class="log-header">
-      <span>SOREFOR // ADMIN</span>
-      <button class="log-close" onclick="closeLog()">✕</button>
-    </div>
-    <div class="log-tabs">
-      <button class="log-tab active" id="tabSubs" onclick="switchTab('subs')">📋 CONTACTS (<span id="subCount">0</span>)</button>
-      <button class="log-tab" id="tabLogs" onclick="switchTab('logs')">📡 VISITES (<span id="logCount">0</span>)</button>
-    </div>
-    <div class="log-body" id="logBody"></div>
-  </div>
-</div>
-
 <script>
-// ── VISIT LOGGER ──────────────────────────────────────────────
-const LOG_KEY = 'sorefor_visits_v1';
-
-function getVisits() {
-  try { return JSON.parse(localStorage.getItem(LOG_KEY) || '[]'); }
-  catch { return []; }
-}
-
-function saveVisit(entry) {
-  const visits = getVisits();
-  visits.push(entry);
-  // Garder les 500 dernières entrées
-  if (visits.length > 500) visits.splice(0, visits.length - 500);
-  localStorage.setItem(LOG_KEY, JSON.stringify(visits));
-}
-
-function logEvent(type, detail = '') {
-  const entry = {
-    ts: new Date().toISOString(),
-    type,
-    detail,
-    ua: navigator.userAgent.substring(0, 80),
-    ref: document.referrer || 'direct',
-    lang: navigator.language,
-  };
-  saveVisit(entry);
-}
-
-// Log page view
-logEvent('PAGE_VIEW', location.pathname);
-
-// Log section visibility
-const sections = ['accueil','qui','constat','modele','services','contact'];
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) logEvent('SECTION_VIEW', e.target.id);
-  });
-}, { threshold: 0.4 });
-sections.forEach(id => { const el = document.getElementById(id); if(el) obs.observe(el); });
-
-// Log CTA clicks
-document.querySelectorAll('a[href], button[type=submit]').forEach(el => {
-  el.addEventListener('click', () => {
-    logEvent('CLICK', el.innerText?.trim().substring(0,50) || el.href || 'btn');
-  });
-});
-
-// ── FORM SUBMISSIONS STORAGE ──────────────────────────────────
-const SUB_KEY = 'sorefor_submissions_v1';
-
-function getSubmissions() {
-  try { return JSON.parse(localStorage.getItem(SUB_KEY) || '[]'); }
-  catch { return []; }
-}
-
-function saveSubmission(data) {
-  const subs = getSubmissions();
-  subs.push({ id: Date.now(), ts: new Date().toISOString(), ...data });
-  localStorage.setItem(SUB_KEY, JSON.stringify(subs));
-}
-
-function deleteSubmission(id) {
-  const subs = getSubmissions().filter(s => s.id !== id);
-  localStorage.setItem(SUB_KEY, JSON.stringify(subs));
-  renderSubs();
-}
-
-// ── LOG VIEWER ────────────────────────────────────────────────
-let adminClicks = 0, adminTimer, currentTab = 'subs';
-document.getElementById('adminTrigger').addEventListener('click', () => {
-  adminClicks++;
-  clearTimeout(adminTimer);
-  if (adminClicks >= 3) { openLog(); adminClicks = 0; }
-  else { adminTimer = setTimeout(() => adminClicks = 0, 800); }
-});
-
-function openLog() {
-  document.getElementById('logOverlay').classList.add('open');
-  switchTab(currentTab);
-}
-function closeLog() { document.getElementById('logOverlay').classList.remove('open'); }
-document.getElementById('logOverlay').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closeLog();
-});
-
-function switchTab(tab) {
-  currentTab = tab;
-  document.getElementById('tabSubs').classList.toggle('active', tab === 'subs');
-  document.getElementById('tabLogs').classList.toggle('active', tab === 'logs');
-  tab === 'subs' ? renderSubs() : renderLogs();
-}
-
-function renderSubs() {
-  const subs = getSubmissions();
-  document.getElementById('subCount').textContent = subs.length;
-  const body = document.getElementById('logBody');
-  if (!subs.length) {
-    body.innerHTML = '<div class="log-empty">Aucune soumission enregistrée.</div>';
-    return;
-  }
-  const labels = { nom:'Nom', prenom:'Prénom', email:'Email', telephone:'Tél.', objet:'Objet', message:'Message' };
-  body.innerHTML = `
-    <div class="log-toolbar">
-      <button class="export-btn" onclick="exportCSV()">⬇ Exporter CSV</button>
-    </div>` +
-    [...subs].reverse().map(s => `
-    <div class="sub-card">
-      <div class="sub-card-header">
-        <span class="sub-objet">${esc(s.objet || '—')}</span>
-        <span class="sub-ts">${s.ts.replace('T',' ').substring(0,19)}</span>
-      </div>
-      ${Object.entries(labels).map(([k,l]) => s[k] ? `
-        <div class="sub-field">
-          <span class="k">${l}</span>
-          <span class="v">${esc(s[k])}</span>
-        </div>` : '').join('')}
-      <div class="sub-actions">
-        <button class="sub-btn" onclick="copyContact(${s.id})">Copier email</button>
-        <button class="sub-btn danger" onclick="deleteSubmission(${s.id})">Supprimer</button>
-      </div>
-    </div>`).join('');
-}
-
-function renderLogs() {
-  const visits = getVisits();
-  document.getElementById('logCount').textContent = visits.length;
-  const body = document.getElementById('logBody');
-  if (!visits.length) {
-    body.innerHTML = '<div class="log-empty">Aucune entrée enregistrée.</div>';
-    return;
-  }
-  body.innerHTML = [...visits].reverse().map(v =>
-    `<div class="log-entry">
-      <span class="ts">${v.ts.replace('T',' ').substring(0,19)}</span>
-      <span class="event">[${v.type}]</span>
-      <span class="detail">${v.detail || ''} ${v.ref && v.ref !== 'direct' ? '· '+v.ref.substring(0,40) : ''}</span>
-    </div>`
-  ).join('');
-}
-
-function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-
-function copyContact(id) {
-  const sub = getSubmissions().find(s => s.id === id);
-  if (sub) navigator.clipboard.writeText(sub.email || '').then(() => alert('Email copié : ' + sub.email));
-}
-
-function exportCSV() {
-  const subs = getSubmissions();
-  if (!subs.length) return;
-  const cols = ['ts','nom','prenom','email','telephone','objet','message'];
-  const rows = [cols.join(';'), ...subs.map(s => cols.map(c => '"'+(s[c]||'').replace(/"/g,'""')+'"').join(';'))];
-  const blob = new Blob([rows.join('\n')], { type: 'text/csv;charset=utf-8;' });
-  const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'sorefor_contacts.csv' });
-  a.click();
-}
-
-// ── CONTACT FORM ──────────────────────────────────────────────
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(this));
-  saveSubmission(data);
-  logEvent('FORM_SUBMIT', `${data.objet} · ${data.email}`);
-  this.style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
-});
-
-// ── SCROLL REVEAL ─────────────────────────────────────────────
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+  // Scroll reveal
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 </script>
+
 </body>
 </html>

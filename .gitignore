@@ -1,1 +1,5 @@
 doc_jean
+__pycache__
+logs.txt
+venv/
+*.pyc
