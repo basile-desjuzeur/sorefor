@@ -9,4 +9,5 @@ dependencies = [
     "gunicorn>=26.0.0",
     "python-dotenv>=1.2.2",
     "unicorn>=2.1.4",
+    "gspread>=6.0.0",
 ]
