@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: sorefor
+    runtime: python
+    buildCommand: pip install uv && uv sync
+    startCommand: uv run gunicorn app:app
+    envVars:
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: OWNER_EMAIL_1
+        sync: false
+      - key: OWNER_EMAIL_2
+        sync: false
+      - key: GSHEET_CREDENTIALS
+        sync: false
+      - key: GSHEET_ID
+        sync: false
